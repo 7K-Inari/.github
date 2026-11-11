@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a reproducible problem in an Inari project
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem.
+
+        **Do not report security vulnerabilities here.** Follow the [security policy](https://github.com/7K-Inari/.github/blob/main/SECURITY.md) for private reporting. Do not include secrets, personal data, tenant data, or access to another user's environment.
+  - type: input
+    id: repository
+    attributes:
+      label: Affected repository
+      description: For example, 7K-Inari/inari-server.
+      placeholder: 7K-Inari/repository-name
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Include the release, image tag, or commit you tested.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant Kubernetes, cloud, browser, CLI, and configuration details.
+      placeholder: Kubernetes version, installation method, operating system, relevant non-secret configuration
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reproducible sequence you can.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the observed result and any user-facing error.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Redact credentials, tokens, private endpoints, personal data, and tenant data.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and pull requests for this problem.
+          required: true
+        - label: I removed secrets, personal data, and tenant data from this report.
+          required: true

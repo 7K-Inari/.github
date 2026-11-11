@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest an improvement to an Inari project
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea. Please describe the problem before proposing an implementation.
+
+        **External code and documentation contributions are currently paused under G1.** Feature requests and discussion in issues are welcome, but this template does not open external implementation contributions. Do not use a public issue for a security report.
+  - type: input
+    id: repository
+    attributes:
+      label: Affected repository
+      description: For example, 7K-Inari/inari-ui.
+      placeholder: 7K-Inari/repository-name
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What user need or operational problem should this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+      description: Describe the behavior or experience you would like, including scope boundaries.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include workarounds or reasons existing behavior is insufficient.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add architecture, tenancy, compatibility, security, or rollout considerations where relevant.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and pull requests for a similar request.
+          required: true
+        - label: This request contains no secrets, personal data, tenant data, or vulnerability details.
+          required: true
